@@ -1,5 +1,5 @@
 // Importamos la función handler desde nextAuth.ts
-import handler from "./nextAuth";
+import { authOptions } from "../../../../nextAuth";
 
 // Exportamos la función handler para su uso en route.ts
-export default handler;
+export default authOptions;
