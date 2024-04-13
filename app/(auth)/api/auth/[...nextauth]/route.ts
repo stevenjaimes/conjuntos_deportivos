@@ -8,24 +8,24 @@ export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma) as any,
   providers: [
     CredentialsProvider({
-      name: 'credentials',
+      name: "credentials",
       credentials: {
-        email: { label: 'email', type: 'text' },
-        password: { label: 'password', type: 'password' }
+        email: { label: "email", type: "text" },
+        password: { label: "password", type: "password" },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error('Invalid credentials');
+          throw new Error("Invalid credentials");
         }
 
         const user = await prisma.user.findUnique({
           where: {
-            email: credentials.email
-          }
+            email: credentials.email,
+          },
         });
 
         if (!user || !user?.hashedPassword) {
-          throw new Error('Invalid credentials');
+          throw new Error("Invalid credentials");
         }
 
         const isCorrectPassword = await bcrypt.compare(
@@ -34,12 +34,12 @@ export const authOptions: AuthOptions = {
         );
 
         if (!isCorrectPassword) {
-          throw new Error('Invalid credentials');
+          throw new Error("Invalid credentials");
         }
 
         return user;
-      }
-    })
+      },
+    }),
   ],
 
   pages: {
@@ -53,6 +53,18 @@ export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-const handler = NextAuth(authOptions);
+export const getServerSideProps = async (context: { req: any; res: any; }) => {
+  const { req, res } = context;
 
-export default handler;
+  const authHandler = NextAuth(authOptions);
+
+  authHandler.handle(req, res, (authResult: { error: any; }) => {
+    if (authResult.error) {
+      return { props: { error: authResult.error } };
+    }
+
+    return { props: {} };
+  });
+
+  return { props: {} };
+};
