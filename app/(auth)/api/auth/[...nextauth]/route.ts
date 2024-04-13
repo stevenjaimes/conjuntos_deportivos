@@ -1,5 +1,7 @@
-// Importamos la función handler desde nextAuth.ts
-import { authOptions } from "../../../../nextAuth";
+import { handlers } from "../../../../nextAuth"
+export const { GET, POST } = handlers
 
-// Exportamos la función handler para su uso en route.ts
-export default authOptions;
+
+GET.authUrl = "/api/auth/[...nextauth]";
+
+console.log(GET.authUrl)

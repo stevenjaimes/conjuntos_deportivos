@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import prisma from "@/lib/prismadb";
 import bcrypt from "bcrypt";
 
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma) as any,
   providers: [
     CredentialsProvider({
@@ -54,4 +54,6 @@ export const authOptions: AuthOptions = {
 };
 
 // Aquí exportamos una función que utiliza NextAuth como manejador de rutas
+const handlers= NextAuth(authOptions);
 
+export { handlers };
