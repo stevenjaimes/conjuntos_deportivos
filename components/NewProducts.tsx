@@ -5,7 +5,7 @@ import Link from "next/link";
 const NewProducts = async () => {
   const products = await FetchProducts();
   const newArrivals = products.filter(
-    (product) => product.metadata?.new === "true"
+    (product) => product.metadata?.new === "true"&& product.metadata?.category === "buzos"
   );
   return (
     <section className="py-10 border-t">

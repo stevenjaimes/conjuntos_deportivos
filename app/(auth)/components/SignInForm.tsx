@@ -30,11 +30,11 @@ const SignInForm = () => {
         throw new Error(result?.error);
       }
 
-      toast.success("Authentication successful");
+      toast.success("Autenticación exitosa");
       router.refresh;
       router.push("/");
     } catch (error: any) {
-      toast.error(error.message || "Authentication failed");
+      toast.error(error.message || "La autenticación fallo");
     }
   };
 

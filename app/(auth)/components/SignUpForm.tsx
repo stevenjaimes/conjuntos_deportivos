@@ -19,7 +19,7 @@ const SignUpForm = () => {
 
   useEffect(() => {
     if (session.status === "authenticated") {
-      toast.success("You are already signed in!");
+      toast.success("Ya has iniciado sesión!");
       router.push("/");
     }
   }, [session.status, router]);
@@ -31,7 +31,7 @@ const SignUpForm = () => {
     if (result?.existingUser) {
       toast.error(result.existingUser);
     } else {
-      toast.success("Welcome! Please Sign In");
+      toast.success("Bienvenido! Por favor inicia sesión");
       ref.current?.reset();
       router.push("/sign-in");
     }

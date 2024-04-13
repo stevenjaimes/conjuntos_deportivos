@@ -55,9 +55,10 @@ const ProductsCard = ({
         className="my-2 p-2 border rounded-md"
       >
         <option value="">Seleccionar talla:</option>
-        <option value="small">Pequeño</option>
-        <option value="medium">Mediano</option>
-        <option value="large">Grande</option>
+        <option value="small">S</option>
+        <option value="medium">M</option>
+        <option value="large">L</option>
+        <option value="large">XL</option>
       </select>
 
       <AddToCart
