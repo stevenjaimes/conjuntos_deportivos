@@ -9,19 +9,19 @@ const Info = () => {
       <div className="main-container flex justify-between max-md:grid-cols-2 max-md:gap-x-20 max-md:gap-y-10">
         <div className="flex items-center gap-2 uppercase text-sm">
           <BiWorld className="text-3xl" />
-          <span>Free Shipping Worldwide</span>
+          <span>Envío gratuito en todo el mundo</span>
         </div>
         <div className="flex items-center gap-2 uppercase text-sm">
           <FaArrowRotateLeft className="text-3xl" />
-          <span>Money Back Guarenteed</span>
+          <span>Garantía de devolución de dinero</span>
         </div>
         <div className="flex items-center gap-2 uppercase text-sm">
           <IoIosLock className="text-3xl" />
-          <span>Secure Online Payments</span>
+          <span>Pagos en línea seguros</span>
         </div>
         <div className="flex items-center gap-2 uppercase text-sm">
           <GiTrophy className="text-3xl" />
-          <span>Best Premium Quality</span>
+          <span>La mejor calidad premium</span>
         </div>
       </div>
     </section>

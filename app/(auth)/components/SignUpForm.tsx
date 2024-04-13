@@ -74,11 +74,11 @@ const SignUpForm = () => {
             label="Password"
             disabled={isSubmitting}
           />
-          <Button type="submit">Create Account</Button>
+          <Button type="submit">Crea una cuenta</Button>
         </form>
         <Link href={"/sign-in"}>
           <span className="mt-3 hover:underline">
-            Already have an account? Sign In &#8594;
+            Tienes una cuenta ? Inicia sesión &#8594;
           </span>
         </Link>
       </div>

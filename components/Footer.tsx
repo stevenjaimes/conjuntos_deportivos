@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div className="w-full text-center text-sm text-white flex flex-col gap-5 md:flex-row justify-center items-center">
-          <span>All Rights Reserved devthreads.com</span>
+          <span>Todos los derechos reservados Angelica Jauregui</span>
 
           <Image
             src={"/payment-getways.png"}

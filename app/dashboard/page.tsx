@@ -13,19 +13,19 @@ const page = async () => {
           <div className="p-8 flex items-center justify-center gap-12 text-center">
             <div>
               <p className="text-2xl">
-                Hello, {user?.name}
+                Hola, {user?.name}
               </p>
               <p>{user?.email}</p>
             </div>
           </div>
           <div>
             <h1 className="font-bold text-xl text-center underline">
-              Orders
+              Pedidos
             </h1>
 
             {orders?.length === 0 ? (
               <div>
-                <h1>No Orders Placed</h1>
+                <h1>Ningún pedido realizado</h1>
               </div>
             ) : (
               <>
@@ -35,11 +35,11 @@ const page = async () => {
                     className="rounded-lg p-8 my-4 space-y-2 bg-gray-200"
                   >
                     <h2 className="text-xs font-medium">
-                      Order Number:{" "}
+                     Numero de orden:{" "}
                       {order.id.replaceAll(/\D/g, "")}
                     </h2>
                     <p className="text-xs">
-                      Status: {order.status}
+                      Estado: {order.status}
                     </p>
 
                     <div className="text-sm lg:flex items-center gap-4">
@@ -65,7 +65,7 @@ const page = async () => {
                           </span>
                           <div className="flex items-baseline gap-4">
                             <p>
-                              Quantity: {product.quantity}
+                              Cantidad: {product.quantity}
                             </p>
                           </div>
                         </div>
@@ -82,7 +82,7 @@ const page = async () => {
         </div>
       ) : (
         <div className="h-96 flex items-center justify-center text-2xl uppercase">
-          Please Sign In To View Orders
+          Por favor inicia sesión para ver las ordenes
         </div>
       )}
     </>

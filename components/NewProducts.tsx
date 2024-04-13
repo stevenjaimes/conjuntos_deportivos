@@ -12,10 +12,10 @@ const NewProducts = async () => {
       <div className="main-container">
         <div className="flex justify-between items-center">
           <h1 className="text-xl uppercase border-b border-gray-900 text-gray-900">
-            New Arrivals
+            Nuevas colecciones
           </h1>
           <Link href={"/shop"} className="hover:underline">
-            <span>View More &#8594;</span>
+            <span>Ver más &#8594;</span>
           </Link>
         </div>
         <div className="grid lg:grid-cols-4 gap-5 grid-cols-2">

@@ -41,7 +41,7 @@ const SignInForm = () => {
   return (
     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-2xl md:outline outline-1 outline-gray-200">
       <div className="px-4 py-8 sm:rounded-lg sm:px-10">
-        <h1 className="text-2xl mb-5">Sign In</h1>
+        <h1 className="text-2xl mb-5">Iniciar sesión</h1>
         <form
           onSubmit={handleSubmit}
           ref={formRef}
@@ -53,11 +53,11 @@ const SignInForm = () => {
             id="password"
             label="Password"
           />
-          <Button type="submit">Login</Button>
+          <Button type="submit">Logearte</Button>
         </form>
         <Link href={"/sign-up"}>
           <span className="mt-3 hover:underline">
-            Dont have an account? Create one &#8594;
+            No tienes una cuenta? Crea una &#8594;
           </span>
         </Link>
       </div>

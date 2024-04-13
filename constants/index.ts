@@ -1,19 +1,19 @@
 export const mainLinks = [
   {
     route: "/",
-    label: "Home",
+    label: "Inicio",
   },
   {
     route: "/shop",
-    label: "Shop",
+    label: "Tienda",
   },
   {
     route: "/contact",
-    label: "Contact",
+    label: "Contacto",
   },
   {
     route: "/",
-    label: "About",
+    label: "Acerca de",
   },
 ];
 
@@ -21,11 +21,11 @@ export const mainLinks = [
 export const userLinks = [
   {
     route: "/dashboard",
-    label: "Orders",
+    label: "Pedidos",
   },
   {
     route: "/wishlist",
-    label: "Wishlist",
+    label: "Lista de deseos",
   },
 ];
 

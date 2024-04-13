@@ -100,9 +100,9 @@ const CheckoutForm = ({
       >
         <span>
           {isLoading ? (
-            <span>Processing...</span>
+            <span>Procesando...</span>
           ) : (
-            <span>Pay Now</span>
+            <span>Pagar ahora</span>
           )}
         </span>
       </Button>

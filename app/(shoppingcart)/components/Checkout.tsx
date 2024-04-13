@@ -40,14 +40,14 @@ const Checkout = ({
           }),
         });
         if (response.status === 403) {
-          toast.error("Please Sign In");
+          toast.error("Por favor inicia sesión");
           router.push("/sign-in");
           checkoutStore.setCheckout("cart");
           return;
         }
 
         if (!response.ok) {
-          throw new Error("network issues");
+          throw new Error("Error de red");
         }
 
         const data = await response.json();

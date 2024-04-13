@@ -33,11 +33,11 @@ const AddToCart = ({
           onClick();
         } else {
           addItem(product as any);
-          toast.success(`${name} has been added to cart`);
+          toast.success(`${name} ha sido añadido al carro`);
         }
       }}
     >
-      Add To Cart
+      Añadir al carro
     </button>
   );
 };

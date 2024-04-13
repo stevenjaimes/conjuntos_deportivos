@@ -23,8 +23,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ user }) => {
-  const [openMobileMenu, setOpenMobileMenu] =
-    useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
 
   const mobileMenuHandler = () => {
@@ -39,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
       <div className="main-container border-b border-1 flex justify-between items-center py-2 relative">
         <Link href={"/"}>
           <div className="flex gap-1 items-center text-xl font-medium text-black">
-            <h1>DEV-THREADS</h1>
+            <h1>STIFLER</h1>
             <TbBracketsAngle />
           </div>
         </Link>
@@ -55,16 +54,10 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
         <div className="flex gap-5 text-xl [&>*]:cursor-pointer">
           <CartIcon />
           <WishlistIcon />
-          <div
-            className="max-md:hidden"
-            onClick={userMenuHandler}
-          >
+          <div className="max-md:hidden" onClick={userMenuHandler}>
             <AiOutlineUser />
           </div>
-          <div
-            className="md:hidden"
-            onClick={mobileMenuHandler}
-          >
+          <div className="md:hidden" onClick={mobileMenuHandler}>
             {openMobileMenu ? <MdClose /> : <FiMenu />}
           </div>
         </div>
@@ -74,17 +67,11 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
           <div className="z-10 absolute right-0 top-[40px] w-28 bg-gray-700 shadow-md rounded-md p-4 text-white max-md:hidden text-center">
             {!user ? (
               <ul>
-                <Link
-                  onClick={() => setOpenUserMenu(false)}
-                  href={"/sign-in"}
-                >
-                  <li>Log In</li>
+                <Link onClick={() => setOpenUserMenu(false)} href={"/sign-in"}>
+                  <li>Iniciar sesión</li>
                 </Link>
-                <Link
-                  onClick={() => setOpenUserMenu(false)}
-                  href={"/sign-up"}
-                >
-                  <li>Sign Up</li>
+                <Link onClick={() => setOpenUserMenu(false)} href={"/sign-up"}>
+                  <li>Registrarse</li>
                 </Link>
               </ul>
             ) : (
@@ -98,10 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
                     <li>{link.label}</li>
                   </Link>
                 ))}
-                <li
-                  className="cursor-pointer"
-                  onClick={() => signOut()}
-                >
+                <li className="cursor-pointer" onClick={() => signOut()}>
                   Sign Out
                 </li>
               </ul>
@@ -123,10 +107,10 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
               {!user ? (
                 <>
                   <Link href={"/sign-in"}>
-                    <li>Log In</li>
+                    <li>Iniciar sesión</li>
                   </Link>
                   <Link href={"/sign-up"}>
-                    <li>Sign Up</li>
+                    <li>Registrarse</li>
                   </Link>
                 </>
               ) : (
@@ -136,11 +120,8 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
                       <li>{link.label}</li>
                     </Link>
                   ))}
-                  <li
-                    className="cursor-pointer"
-                    onClick={() => signOut()}
-                  >
-                    Sign Out
+                  <li className="cursor-pointer" onClick={() => signOut()}>
+                    Salir
                   </li>
                 </>
               )}

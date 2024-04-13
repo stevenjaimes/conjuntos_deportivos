@@ -18,7 +18,7 @@ const ProductsCard = ({
   const isSizeSelected = selectedSize !== "";
 
   const showToast = () => {
-    toast.error("Please choose a size first");
+    toast.error("Por favor elige la talla primero");
   };
   return (
     <div className=" relative flex flex-col items-center">
@@ -54,10 +54,10 @@ const ProductsCard = ({
         onChange={(e) => setSelectedSize(e.target.value)}
         className="my-2 p-2 border rounded-md"
       >
-        <option value="">Select Size</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
+        <option value="">Seleccionar talla:</option>
+        <option value="small">Pequeño</option>
+        <option value="medium">Mediano</option>
+        <option value="large">Grande</option>
       </select>
 
       <AddToCart

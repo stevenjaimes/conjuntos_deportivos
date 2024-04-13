@@ -92,7 +92,7 @@ const Cart = () => {
 
                   <div className="flex flex-1 items-end justify-between text-sm">
                     <p className="text-gray-500">
-                      QTY: {item.quantity}
+                      Cantidad: {item.quantity}
                     </p>
 
                     <div className="flex">
@@ -101,7 +101,7 @@ const Cart = () => {
                         onClick={() => removeItem(item.id)}
                         className="font-medium"
                       >
-                        Remove
+                       Eliminar
                       </button>
                     </div>
                   </div>
@@ -120,8 +120,7 @@ const Cart = () => {
                   </p>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">
-                  Shipping and taxes are calcualted at
-                  checkout.
+                  Envio y impuestos son calculados en checkout
                 </p>
                 <div className="mt-6 w-full flex justify-center">
                   <Button
