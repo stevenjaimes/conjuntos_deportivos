@@ -25,7 +25,7 @@ const authOptions: AuthOptions = {
         });
 
         if (!user || !user?.hashedPassword) {
-          throw new Error('Invalid credentials');
+          throw new Error('Credenciales invalidas');
         }
 
         const isCorrectPassword = await bcrypt.compare(
@@ -54,4 +54,7 @@ const authOptions: AuthOptions = {
 };
 
 // Aquí exportamos una función que utiliza NextAuth como manejador de rutas
-export default NextAuth(authOptions);
+
+const handler = NextAuth(authOptions);
+
+export default handler;
