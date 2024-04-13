@@ -41,18 +41,18 @@ export const authOptions: AuthOptions = {
       }
     })
   ],
-  
+
   pages: {
     signIn: "/sign-in",
   },
-  
+
   session: {
     strategy: "jwt",
   },
-  
+
   secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+export default handler;
