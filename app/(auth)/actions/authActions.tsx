@@ -31,6 +31,7 @@ export async function createUser(formData: FormData) {
         },
       });
 
+
       revalidatePath("/");
     } catch (existingUser) {
       return {

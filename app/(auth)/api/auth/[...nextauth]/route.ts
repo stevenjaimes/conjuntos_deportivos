@@ -1,9 +1,5 @@
-import NextAuth from "next-auth";
-import { authOptions } from "../../../auth.config";
-import { NextApiRequest, NextApiResponse } from "next";
+import { handler } from "../../../../nextauth"
 
-// Exporta funciones con nombre para métodos HTTP (si es necesario)
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
-  // Tu lógica personalizada usando req y res (opcional)
-  return NextAuth(req, res, authOptions);
-}
+export const POST = handler
+export const GET = handler
+
